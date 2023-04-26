@@ -90,16 +90,30 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
-// Console.WriteLine("Введите число: ");
-// int x = Convert.ToInt32(Console.ReadLine());
-// int n = 0;
-// int y = (x % 10 / 10);
-// Console.WriteLine(y);
- //if (y == i)
-// {
-//  Console.WriteLine($"{y}"); 
-// }
-//  Console.WriteLine("Третьей цифры нет"); 
+Console.Write("Введите число: ");
+    string N = Console.ReadLine();
+    int len_N = N.Length;
+    if ( len_N < 3 ) 
+      {
+        Console.WriteLine("Третьго числа нет");
+      }
+    else
+      {
+        int x = Convert.ToInt32(N);
+        for (int i = 3; i < len_N; i++)
+          {            
+            x = x / 10;  
+          }  
+        if (x % 10 == 0)
+          {
+            Console.WriteLine(0);
+          }
+        else
+          {
+            Console.WriteLine(x - x / 10 * 10);
+          }
+      }
+      
 
       
    
@@ -115,19 +129,19 @@
 // 7 -> да
 // 1 -> нет
 
-Console.Write("Введите число: ");
-int num = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите число: ");
+// int num = Convert.ToInt32(Console.ReadLine());
 
-string[] mas = {"понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресение"};
+// string[] mas = {"понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресение"};
 
-    if(num > 5 && num < 8)
-    {
-        Console.WriteLine("Да");
-    }
-    else
-    {
-        Console.WriteLine($"Нет");
-    }
+//     if(num > 5 && num < 8)
+//     {
+//         Console.WriteLine("Да");
+//     }
+//     else
+//     {
+//         Console.WriteLine($"Нет");
+//     }
 
 
 
